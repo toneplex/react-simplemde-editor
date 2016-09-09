@@ -2,7 +2,15 @@ var webpack = require('webpack');
 var isProd = (process.env.NODE_ENV === 'production');
 
 module.exports = {
-  node: { fs: 'empty' },
+  node: {
+    console: 'empty',
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty'
+  },
+
+  externals: ['fs'],
+
   entry: './src/index.js',
   devtool: 'source-map',
   output: {

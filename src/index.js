@@ -43,6 +43,7 @@ module.exports = React.createClass({
   },
 
   createEditor: function() {
+    console.log(document.getElementById(this.id));
     const initialOptions = {
       element: document.getElementById(this.id)
     };
